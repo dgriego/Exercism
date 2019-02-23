@@ -1,5 +1,7 @@
 class FlattenArray
   def self.flatten(arr, new_arr = [])
+    current_index = 0
+
     while current_index < arr.length
       obj = arr[current_index]
 
