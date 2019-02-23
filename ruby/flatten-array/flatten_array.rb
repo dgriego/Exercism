@@ -1,5 +1,5 @@
 class FlattenArray
-  def self.flatten(arr, new_arr = [], current_index = 0)
+  def self.flatten(arr, new_arr = [])
     while current_index < arr.length
       obj = arr[current_index]
 
@@ -15,3 +15,18 @@ class FlattenArray
     new_arr
   end
 end
+
+#
+# tried this approach as well, but it is not nearly as performant
+#
+# class FlattenArray
+#   def self.flatten(arr)
+#     arr_to_str = arr.to_s.gsub(/(\]|\[)+/, '')
+
+#     arr_to_str.split(',').each_with_object([]) do |elem, arr|
+#       elem = eval(elem)
+
+#       arr << elem unless elem.nil?
+#     end
+#   end
+# end
