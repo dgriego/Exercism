@@ -1,5 +1,3 @@
-require 'benchmark'
-
 class Acronym
   # scan
   #  u                s                 t                   r
@@ -17,5 +15,3 @@ class Acronym
     phrase.split(/\W/).map { |word| word[0] }.join.upcase
   end
 end
-
-p Acronym.abbreviate("bring your own beer")
