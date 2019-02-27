@@ -1,6 +1,6 @@
 class Complement
-  def self.of_dna(dna_strand)
-    return dna_strand if dna_strand.empty?
+  def self.of_dna(strand)
+    return strand if strand.empty?
 
     dna_conversion_ref = {
       "G" => "C",
@@ -9,7 +9,7 @@ class Complement
       "A" => "U"
     }
 
-    dna_strand.chars.map do |nucleotide|
+    strand.chars.map do |nucleotide|
       dna_conversion_ref[nucleotide]
     end.join
   end
